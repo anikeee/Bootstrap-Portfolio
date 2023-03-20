@@ -1,0 +1,10 @@
+/* Add your custom styles here */
+a:hover {
+    text-decoration: none;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add any additional custom styles or overrides */
