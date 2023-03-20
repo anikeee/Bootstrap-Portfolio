@@ -1,10 +1,52 @@
-/* Add your custom styles here */
-a:hover {
-    text-decoration: none;
+/* 3D animation */
+.img-thumbnail {
+    border-radius: 50%; /* makes the image rounded */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* adds a glowing effect */
+    width: 200px; /* reduces the size of the image */
+    height: 200px;
+    transition: transform 0.5s, box-shadow 0.5s; /* adds a transition effect to the transform and box-shadow properties */
 }
 
-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.img-thumbnail:hover {
+    transform: rotateY(180deg); /* flips the image */
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.8); /* increases the size of the glow */
 }
 
-/* Add any additional custom styles or overrides */
+#work .card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+/* Flame animation */
+/* Flame animation */
+@keyframes burn {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.flame {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: auto;
+    z-index: -1;
+    animation: burn 1s infinite;
+}
